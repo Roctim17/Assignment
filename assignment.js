@@ -28,6 +28,10 @@ function pandaCost(singara, Shomucha, gilapi) {
         var errorMassage = "Sorry Mama Out of stock ";
         return errorMassage;
     }
+    else if (singara, Shomucha, gilapi % 2 != 0 || singara, Shomucha, gilapi % 2 != 1) {
+        var errorMassage = "Please give the full number";
+        return errorMassage;
+    }
     else if (singara >= 0 && Shomucha >= 0 && gilapi >= 0) {
         let totalSingaraPrice = singaraPrice * singara;
         let totalShomuchaPrice = ShomuchaPrice * Shomucha;
@@ -42,9 +46,10 @@ function pandaCost(singara, Shomucha, gilapi) {
         var errorMassage = "Please give the Right number";
         return errorMassage;
     }
+
     return totalPrice;
 }
-console.log(pandaCost(0, 50, 0));
+console.log(pandaCost(0, 5.5, 0));
 
 // Problem No 3
 
@@ -53,7 +58,11 @@ function picnicBudget(person) {
     const first100perPersonCost = 5000;
     const secend100perPersonCost = 4000;
     const Trird100PlsePerPersonCost = 3000;
-    if (person > 0 && person <= 100) {
+    if (person % 2 != 0 || person % 2 != 1) {
+        var errorMassage = "Ar e vai Half Man Koi pailen";
+        return errorMassage;
+    }
+    else if (person > 0 && person <= 100) {
         perPersonTotalCost = person * first100perPersonCost;
     }
     else if (person > 100 && person <= 200) {
@@ -71,13 +80,14 @@ function picnicBudget(person) {
         var errorMassage = "Please give the Right number";
         return errorMassage;
     }
+
     else {
         var errorMassage = "Please give the Right Value";
         return errorMassage;
     }
     return perPersonTotalCost;
 }
-console.log(picnicBudget(101));
+console.log(picnicBudget(101.5));
 
 // Problem No 4
 
